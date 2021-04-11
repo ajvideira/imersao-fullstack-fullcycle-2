@@ -26,7 +26,7 @@ func main() {
 	go consumer.Consume()
 	
 	for msg := range msgChan {
-		fmt.Println(string(msg.Value))
+		fmt.Printf("Received message: %v\n", string(msg.Value))
 		go proKafka.Produce(msg)
 	}
 
