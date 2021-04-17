@@ -17,7 +17,7 @@ type Position struct {
 
 type Route struct {
 	ID        string			`json:"routeId"`
-	ClientID  string			`json:"clienteId"`
+	ClientID  string			`json:"clientId"`
 	Positions []Position	`json:"positions"`
 }
 

@@ -15,9 +15,13 @@ import (
 func Produce(msg *ckafka.Message) {
 	producer := kafka.NewKafkaProducer()
 
+	log.Println(string(msg.Value))
+
 	route := &route.Route{}
 
 	json.Unmarshal(msg.Value, route)
+
+	log.Println(route.ClientID)
 
 	route.LoadPositions()
 
