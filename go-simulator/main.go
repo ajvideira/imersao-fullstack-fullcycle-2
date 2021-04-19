@@ -20,6 +20,7 @@ func init() {
 func main() {
 	/*producer := kafka.NewKafkaProducer();
 	kafka.Produce("Olá", "readtest", producer)*/
+	fmt.Println("Starting app simulador")
 
 	msgChan := make(chan *ckafka.Message)
 	consumer := kafka.NewKafkaConsumer(msgChan)
