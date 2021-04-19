@@ -38,3 +38,6 @@ coverage
 
 #.env files
 .env
+
+#Kibana and Elasticsearch
+**/es01/
